@@ -2,6 +2,11 @@
 
 module.exports = function(environment) {
   var ENV = {
+    contentSecurityPolicyHeader: 'Content-Security-Policy',
+    contentSecurityPolicy: {
+      // ... other stuff here
+      'font-src': "'self' http://some-domain:4200",
+    },
     modulePrefix: 'ember-hd',
     environment: environment,
     baseURL: '/',
@@ -18,7 +23,7 @@ module.exports = function(environment) {
       // when it is created
     }
   };
-  
+
   if (environment === 'development') {
     ENV.APP.LOG_RESOLVER = true;
     ENV.APP.LOG_ACTIVE_GENERATION = true;
