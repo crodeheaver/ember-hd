@@ -3,7 +3,9 @@
 module.exports = function(environment) {
   var ENV = {
     contentSecurityPolicyHeader: 'Content-Security-Policy',
-    contentSecurityPolicy: ["'self'", "http://localhost:3000"],
+    contentSecurityPolicy:{
+      'connect-src': ["'self'", "http://localhost:3000"]
+    },
     modulePrefix: 'ember-hd',
     environment: environment,
     baseURL: '/',
