@@ -4,7 +4,10 @@ module.exports = function(environment) {
   var ENV = {
     contentSecurityPolicyHeader: 'Content-Security-Policy',
     contentSecurityPolicy:{
-      'connect-src': ["'self'", "http://localhost:3000"]
+      'script-src': "'self' http://localhost:4200 http://localhost:49152 http://0.0.0.0:49152",
+      'font-src': "'self' https://fonts.gstatic.com",
+      'style-src': "'self' https://fonts.googleapis.com/",
+      'connect-src': "'self' http://localhost:3000"
     },
     modulePrefix: 'ember-hd',
     environment: environment,

@@ -6,7 +6,6 @@ export default Ember.Route.extend({
   },
   actions: {
     addStudent(newStudent) {
-      console.log(newStudent.get('first-name'));
       newStudent.save().then(() => this.transitionTo('students.index'));
     },
 
