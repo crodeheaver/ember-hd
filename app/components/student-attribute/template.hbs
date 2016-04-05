@@ -1,0 +1,14 @@
+<div class="form-group">
+    <label class="col-sm-2 control-label">{{label}}</label>
+    <div class="col-sm-{{size}}">
+      {{#if (eq type "text")}}
+        {{input type=type value=value class="form-control" placeholder=label}}
+      {{/if}}
+      {{#if (eq type "checkbox")}}
+        {{input type=type checked=value class="form-control" placeholder=label}}
+      {{/if}}
+      {{#if (eq type "date")}}
+        {{bootstrap-datepicker value=value placeholder=label class="form-control"}}
+      {{/if}}
+    </div>
+</div>

@@ -10,6 +10,8 @@
       <th>
         Major
       </th>
+      <th>
+      </th>
     </tr>
   </thead>
   <tbody>
@@ -23,6 +25,9 @@
       </td>
       <td>
         {{ student.major }}
+      </td>
+      <td>
+        <button class="btn btn-danger btn-xs" {{action 'deleteButton' student}}>Delete</button>
       </td>
     {{/link-to}}
     {{/each}}

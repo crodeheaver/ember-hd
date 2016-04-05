@@ -4,8 +4,19 @@ export default Ember.Route.extend({
   model() {
     return this.store.createRecord('student');
   },
+  renderTemplate() {
+    this.render('students/form');
+  },
+
+  setupController: function (controller, model) {
+    this._super(controller, model);
+
+    controller.set('title', 'Add New Student');
+    controller.set('buttonLabel', 'Save');
+  },
+
   actions: {
-    addStudent(newStudent) {
+    saveStudent(newStudent) {
       newStudent.save().then(() => this.transitionTo('students.index'));
     },
 

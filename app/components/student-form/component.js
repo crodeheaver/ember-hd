@@ -3,7 +3,7 @@ import Ember from 'ember';
 export default Ember.Component.extend({
   actions: {
 
-    deleteButton(param) {
+    buttonClicked(param) {
       this.sendAction('action', param);
     }
 

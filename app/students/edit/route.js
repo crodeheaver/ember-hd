@@ -4,6 +4,18 @@ export default Ember.Route.extend({
   model(params) {
     return this.store.findRecord('student', params.id);
   },
+
+  setupController: function (controller, model) {
+    this._super(controller, model);
+
+    controller.set('title', 'Edit Student Information');
+    controller.set('buttonLabel', 'Update');
+  },
+
+  renderTemplate() {
+    this.render('students/form');
+  },
+
   actions: {
 
     saveStudent(newStudent) {
