@@ -21,6 +21,16 @@ export default Ember.Route.extend({
     saveStudent(newStudent) {
       newStudent.save().then(() => this.transitionTo('students.index'));
     },
+    addGpa(student) {
+      let srecord = this.store.peekRecord('student', student);
+      let gpa = this.store.createRecord('gpa', { studentId: student});
+      srecord.get('gpa').pushObject(gpa)
+      srecord.save();
+    },
+    deleteGpa(student, gpa) {
+      student.get('gpa').removeObject(gpa)
+      student.save();
+    },
 
     willTransition(transition) {
 

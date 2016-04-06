@@ -24,6 +24,12 @@ export default Ember.Route.extend({
       // rollbackAttributes() removes the record from the store
       // if the model 'isNew'
       this.controller.get('model').rollbackAttributes();
-    }
+    },
+    addComment() {
+      return this.store.createRecord('gpa');
+    },
+    deleteComment(Comment) {
+      
+    },
   }
 });

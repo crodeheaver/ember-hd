@@ -1,0 +1,36 @@
+<div class="form-group">
+    <label class="col-sm-2 control-label">{{label}}</label>
+    <div class="col-sm-5">
+      <table class='table table-striped table-hover'>
+        <thead>
+          <tr>
+            <th>
+              Semester
+            </th>
+            <th>
+              GPA
+            </th>
+            <th>
+              <button class="btn btn-primary btn-xs" {{action 'addClicked' model.id}}>{{fa-icon "plus"}}</button>
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          {{#each model.gpa as |gpa|}}
+          <tr>
+            <td>
+              {{input type=type value=gpa.semester class="form-control" placeholder="semester"}}
+            </td>
+            <td>
+              {{input type=type value=gpa.gpa class="form-control" placeholder="GPA"}}
+            </td>
+            <td>
+              <button class="btn btn-danger btn-xs" {{action 'deleteClicked' model gpa}}>{{fa-icon "minus"}}</button>
+            </td>
+          </tr>
+          {{/each}}
+        </tbody>
+      </table>
+
+    </div>
+</div>
