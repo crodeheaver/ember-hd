@@ -1,13 +1,14 @@
 import Ember from 'ember';
 
 export default Ember.Component.extend({
+  store: Ember.inject.service(),
   actions: {
     addClicked(student){
-      this.sendAction('addGpa', student);
+      let gpa = this.get('store').createRecord('gpa', {});
+      student.get('gpa').pushObject(gpa);
     },
-    deleteClicked(studentId, gpa) {
-      this.sendAction('deleteGpa', studentId, gpa);
+    deleteClicked(student, gpa) {
+      student.get('gpa').removeObject(gpa);
     }
-
   }
 });

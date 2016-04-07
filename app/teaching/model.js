@@ -1,7 +1,6 @@
 import DS from 'ember-data';
 
 export default DS.Model.extend({
-  'student': DS.belongsTo('student'),
   'schoolName': DS.attr('string'),
   'teacherName': DS.attr('string'),
   'beginDate': DS.attr('date'),

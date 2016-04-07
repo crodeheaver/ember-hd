@@ -61,5 +61,6 @@ export default DS.Model.extend({
   "stGradDate": DS.attr('date'),
   "stInitCertDate": DS.attr('date'),
   "stCertApp": DS.attr('boolean'),
-  "stTests": DS.attr('array')
+  "stTests": DS.attr('array'),
+  "stTeaching": DS.attr('array')
 });

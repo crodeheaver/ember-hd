@@ -7,7 +7,7 @@
   {{student-attribute type="checkbox" value=model.isSda label="SDA" size="1"}}
   {{student-attribute type="date" value=model.startDate label="Start Date" size="5"}}
   {{student-attribute type="date" value=model.bgcheckDate label="Background Check" size="5"}}
-  {{student-gpa model=model label="GPA" addGpa='addGpa' deleteGpa='deleteGpa'}}
+  {{student-gpa model=model label="GPA"}}
 
   <h3>Provisional Standing</h3>
   {{student-attribute type="checkbox" value=model.provApplication label="Application" size="1"}}
@@ -64,6 +64,7 @@
   {{student-attribute type="date" value=model.stGradDate label="Graduation Date" size="5"}}
   {{student-attribute type="date" value=model.stInitCertDate label="Initial Certification Date" size="5"}}
   {{student-attribute type="checkbox" value=model.stCertApp label="Certification Application" size="1"}}
+  {{student-teaching model=model label="Student Teaching"}}
 
   <div class="form-group">
     <div class="col-sm-offset-2 col-sm-10">
