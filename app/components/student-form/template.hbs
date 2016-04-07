@@ -35,6 +35,7 @@
   {{student-attribute type="text" value=model.candEduc218 label="Educ 218" size="5"}}
   {{student-attribute type="text" value=model.candEduc225 label="Educ 225" size="5"}}
   {{student-attribute type="text" value=model.candComments label="Comments" size="5"}}
+  {{student-test tests=model.candTests}}
 
   <h3>Pre-Student Teaching</h3>
   {{student-attribute type="checkbox" value=model.preStudentTeachingAp label="Application" size="1"}}
@@ -64,6 +65,7 @@
   {{student-attribute type="date" value=model.stGradDate label="Graduation Date" size="5"}}
   {{student-attribute type="date" value=model.stInitCertDate label="Initial Certification Date" size="5"}}
   {{student-attribute type="checkbox" value=model.stCertApp label="Certification Application" size="1"}}
+  {{student-test tests=model.stTests}}
   {{student-teaching model=model label="Student Teaching"}}
 
   <div class="form-group">

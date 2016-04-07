@@ -3,12 +3,12 @@ import Ember from 'ember';
 export default Ember.Component.extend({
   store: Ember.inject.service(),
   actions:{
-    addClicked(student){
+    addClicked(tests){
       let exp = this.get('store').createRecord('teaching', {});
-      student.get('stTeaching').pushObject(exp);
+      tests.pushObject(exp);
     },
-    deleteClicked(student, exp) {
-      student.get('stTeaching').removeObject(exp);
+    deleteClicked(tests, test) {
+      tests.removeObject(test);
     }
   }
 });
