@@ -21,7 +21,7 @@ export default DS.Model.extend({
   "provRef1": DS.attr('boolean'),
   "provRef2": DS.attr('boolean'),
   "provRef3": DS.attr('boolean'),
-  "provFelonStatement": DS.attr('date'),
+  "provFelonyStatement": DS.attr('date'),
   "provTpcApproval": DS.attr('date'),
   "provComments": DS.attr('string'),
   "diversityObhrs": DS.attr('boolean'),

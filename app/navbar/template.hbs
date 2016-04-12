@@ -14,14 +14,18 @@
         {{#link-to 'students' tagName="li"}}<a href="">Students</a>{{/link-to}}
         <li class="dropdown"><a href="/report" data-toggle="dropdown" class="dropdown-toggle">Reports<b class="caret"></b></a>
           <ul class="dropdown-menu">
-            <li><a href="/report/template1">Report Type 1</a></li>
+              {{#link-to 'reports.provisional' 'provisional' tagName='li'}}<a href="">Provisional</a>{{/link-to}}
+            <!--
             <li><a href="/report/template2">Report Type 2</a></li>
             <li><a href="/report/template3">Report Type 3</a></li>
             <li><a href="/report/template4">Report Type 4</a></li>
+            -->
           </ul>
         </li>
+        <!--
         <li><a href="/admin/">Admin Panel</a></li>
         <li><a href="/auth/logout" class="btn btn-lin">Logout</a></li>
+        -->
       </ul>
     </div>
   </div>
